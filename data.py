@@ -1,3 +1,5 @@
+import random
+from random import randrange
 from faker import Faker
 import datetime
 import string

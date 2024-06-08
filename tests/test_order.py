@@ -29,7 +29,7 @@ class TestOrder:
         requests.put(f"{URLs.ENDPOINT_ORDER_ACCEPT}/{get_order.json()['order']['id']}?courierId={login.json()['id']}")
         get_order_list = requests.get(f"{URLs.ENDPOINT_ORDER_GET_LIST}{login.json()['id']}")
 
-        # assert get_order_list.json()['orders'][0]['id'] == get_order.json()['order']['id']
-        print(get_order_list.json()['orders'][0]['id'])
-        print(get_order.json()['order']['id'])
+        assert get_order_list.json()['orders'][0]['id'] == get_order.json()['order']['id']
+
+
 
